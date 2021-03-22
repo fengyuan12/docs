@@ -2,19 +2,19 @@
 ```javascript
 wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'
 ```
-<img src='/img/linux_mysql_01.png'>
+<img src='./img/linux_mysql_01.png'>
 
 ## 安装yum源
 ```javascript
 rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
 ```
-<img src='/img/linux_mysql_02.png'>
+<img src='./img/linux_mysql_02.png'>
 
 ## 查看有哪些版本的mysql
 ```javascript
 yum repolist all | grep mysql
 ```
-<img src='/img/linux_mysql_03.png'>
+<img src='./img/linux_mysql_03.png'>
 
 ## 启用与禁用mysql版本
   默认安装启用的版本
@@ -30,21 +30,21 @@ yum -y install yum-utils
 ```javascript
 yum install -y mysql-community-server
 ```
-<img src='/img/linux_mysql_04.png'>
+<img src='./img/linux_mysql_04.png'>
 
 ## 启动mysql服务 及 查看mysql服务状态
 ```javascript
 启动 systemctl start mysqld
 查看 systemctl status mysqld
 ```
-<img src='/img/linux_mysql_05.png'>
+<img src='./img/linux_mysql_05.png'>
 
 ## 登录数据库，修改数据库密码
   找到密码: 红框的地方就是密码
 ```javascript
 grep 'temporary password' /var/log/mysqld.log
 ```
-<img src='/img/linux_mysql_06.png'>
+<img src='./img/linux_mysql_06.png'>
 ### 进入mysql
 ```javascript
 mysql -uroot -p
@@ -59,7 +59,7 @@ SET PASSWORD = PASSWORD('Admin123!');
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'Admin123!' WITH GRANT OPTION;
 flush privileges;
 ```
-<img src='/img/linux_mysql_07.png'>
+<img src='./img/linux_mysql_07.png'>
 
 ## 修改一些简单的配置
 ```html
